@@ -1,46 +1,80 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-  <title> jQuery Selectors</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+  <meta charset="utf-8">
+  <title>Exploring jQuery Selectors</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <div class="pics">
-    <img id="baby-ninja" src="https://s3.amazonaws.com/after-school-assets/baby-ninja.gif" width="300px">
-    <img alt="the beatles making faces" src="https://s3.amazonaws.com/after-school-assets/beatles.gif" width="300px">
-    <img class="cat" src="https://s3.amazonaws.com/after-school-assets/cat.gif" width="300px">
-  </div>
+  <div id="wrapper">
+    
+    <div id="content">
+  
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h4>Header 4</h4>
+      <h5>Header 5</h5>
+      <h6>Header 6</h6>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at felis fringilla augue pellentesque cursus. Integer a placerat sapien. Suspendisse faucibus sodales commodo. Etiam ac accumsan urna. Vestibulum condimentum placerat elit, sit amet commodo est feugiat non. Vivamus eget magna semper nisi iaculis interdum. Phasellus interdum, mauris interdum interdum ornare, eros velit varius augue, at fermentum lorem justo eget metus. Nulla id ligula urna. Nulla nisi velit, sagittis nec mattis non, feugiat sit amet libero. Donec et lectus sed tellus consectetur venenatis. Quisque volutpat sagittis est, eget pellentesque neque elementum non.</p>
+    
+      <div>This is a box!</div>
+    
+      <ul>
+        <li>Apples<span class="special">*</span></li>
+        <li>Oranges</li>
+        <li>Bananas</li>
+      </ul>
 
-  <p>
-    Cupcake ipsum dolor sit amet dragée. Gummi bears biscuit sweet roll oat cake. Chupa chups candy soufflé cake cookie. Brownie donut cupcake bear claw danish chupa chups lemon drops. Gummies pastry croissant caramels apple pie jelly beans cookie tart. Caramels soufflé sweet tart chocolate powder candy canes. Brownie wafer cotton candy cake biscuit dessert jujubes. Biscuit jelly topping candy jujubes. Icing cotton candy icing pie. Jelly-o jelly-o gummi bears candy canes muffin ice cream pastry. Pie macaroon icing jelly candy. Powder jujubes candy liquorice wafer. Marshmallow lemon drops tart cheesecake cake jelly oat cake caramels pastry.
+      <ul>
+        <li>broccoli</li>
+        <li>spinach</li>
+        <li>carrots</li>
+      </ul>
+      
+      <ol>
+        <li>Crayon</li>
+        <li>Pencil</li>
+        <li>Stapler</li>
+      </ol>
+    
+      <div id="box2">
+        This is box 2
+      </div>
+      
+      <div class="box3">
+        This is box 3
+      </div>
+    
+      <a href="#">This is a link</a>
+    
+      <div id="box4" class="box5">
+        <a href="#">This is a link nested inside a div</a>
+      </div>
 
-    Lollipop gingerbread powder chocolate liquorice icing. Pastry croissant bonbon ice cream tiramisu. Pastry sesame snaps lollipop marshmallow. Chupa chups brownie candy canes. Halvah sweet apple pie powder dessert jelly. Halvah tart donut lollipop jelly. Icing bear claw toffee carrot cake candy canes. Marshmallow gingerbread candy wafer cupcake toffee cupcake tart. Muffin carrot cake tiramisu icing cupcake fruitcake cotton candy biscuit cupcake. Croissant cake chupa chups tootsie roll soufflé liquorice candy canes. Pie pie biscuit tiramisu sweet roll cookie pie. Croissant dragée halvah gummies jelly beans macaroon tart. Chocolate cake jelly beans powder gingerbread gummies. Powder sweet roll dessert candy canes cheesecake jelly lollipop.
-  </p>
+      <p><img src="images/kitten-face.jpg" width="200px" height="auto" alt="Kitty"/></p>
+      
+      <p><img src="images/cat.jpg" width="200px" height="auto" alt="cat sleeping"/></p>
+    
+      <form name="myform" method="post">
+        Username: <input type="username" name="name" /><br />
+        Password: <input type="password" name="pass" /><br />
+        <input type="radio" name="sex" value="male" /> Male<br />
+        <input type="radio" name="sex" value="female" /> Female<br />
+        <input type="checkbox" name="vehicle" value="Bike" checked="no"/> I have a bike<br />
+        <input type="checkbox" name="vehicle" value="Car" checked="no"/> I have a car <br />
+        <input type="submit" value="Submit" />
+      </form>
+    
+    </div><!-- end content -->
+  </div><!-- end wrapper -->
 
-
-  <div class="pics">
-    <ul id="pic-list">
-      <li>
-        <img src="https://s3.amazonaws.com/after-school-assets/awesome.jpg">
-      </li>
-      <li>
-        <img src="https://s3.amazonaws.com/after-school-assets/cat-stretch.jpg">
-      </li>
-      <li>
-        <img src="https://s3.amazonaws.com/after-school-assets/confused.gif">
-      </li>
-    </ul>
-  </div>
-  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <!-- jQuery Library loaded via CDN -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Link to our local selectors.js script -->
   <script src="js/selectors.js"></script>
-
-  <!-- Open this file in the browser and call `mocha.run()` in console to run tests -->
-  <div id="mocha"></div>
-  <script src="node_modules/mocha/mocha.js"></script>
-  <script src="node_modules/expect/umd/expect.min.js"></script>
-  <script>mocha.setup('bdd');</script>
-  <script src="test/index-test.js"></script>
 </body>
 </html>
